@@ -1,7 +1,7 @@
 import random
 
 # set to true if using Into-theOdd style autohits
-AUTOHIT = False
+autohit = False
 
 party = []
 
@@ -11,7 +11,7 @@ class PlayerCharacter:
         self.name = name
         self.level = level
         self.hp = hp if hp != 0 else level * 4
-        self.ac = ac if ac is not None else (0 if AUTOHIT else 10)
+        self.ac = ac if ac is not None else (0 if autohit else 10)
         self.tohit = tohit
         self.damage = damage
 
@@ -25,7 +25,7 @@ class Monster:
         self.name = name
         self.hd = hd
         self.hp = hd * 4
-        self.ac = ac if ac is not None else (0 if AUTOHIT else 10)
+        self.ac = ac if ac is not None else (0 if autohit else 10)
         self.tohit = hd
         self.damage = damage
         self.morale = morale
