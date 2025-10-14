@@ -1,6 +1,6 @@
 import random
 
-# set to true if using Into-theOdd style autohits
+# set to True if using Into the Odd style autohits
 autohit = False
 
 party = []
@@ -20,7 +20,7 @@ class PlayerCharacter:
                 f"hp={self.hp}, ac={self.ac}, tohit={self.tohit}, "
                 f"damage={self.damage})")
 
-class Monster:
+class NPC:
     def __init__(self, name, hd=1, ac=None, damage=(1, 6), morale=7):
         self.name = name
         self.hd = hd
@@ -31,6 +31,6 @@ class Monster:
         self.morale = morale
 
     def __str__(self):
-        return (f"Monster(name='{self.name}', hd={self.hd}, "
+        return (f"NPC(name='{self.name}', hd={self.hd}, "
                 f"hp={self.hp}, ac={self.ac}, tohit={self.tohit}, "
                 f"damage={self.damage}, morale={self.morale})")
